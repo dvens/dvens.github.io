@@ -79,7 +79,48 @@ img { max-width: 100%;}
 .container {
   width: 1100px;
   margin: 0 auto;
+  padding: 60px 0;
 }
 
+/* 
+  **********************
+      Title styling
+  **********************
+*/ 
+
+h1, h2, h3, h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  color: black;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: black;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* List styling */
+ul {
+  margin-bottom: 20px;
+}
+
+  ul li {
+    margin-bottom: 10px;
+  }
+  
+  ul li a {
+    color: #535353;
+  }
+
+  ul li a:hover {
+    color: tomato;
+  }
 
 
