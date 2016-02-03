@@ -1,2 +1,2 @@
-# CSS-to-the-Rescue
-HTML voor de CSS to the Rescue opdracht
+# CSS To The Rescue
+HTML and CSS only (Flexbox and Ampersand)
