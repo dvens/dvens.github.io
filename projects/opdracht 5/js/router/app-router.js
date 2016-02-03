@@ -1,17 +1,16 @@
 var APP = APP || {};
+APP.router = APP.router || {};
 
 (function(){
 
 	'use strict';
 
-	APP.controller = {
-
+	APP.router = {
+		
 		init: function() {
 
 		}
 
-	}
-
-	APP.controller.init();
+	};
 
 }());
