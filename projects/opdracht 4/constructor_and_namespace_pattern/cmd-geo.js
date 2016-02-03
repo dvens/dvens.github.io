@@ -2,9 +2,6 @@
 
 	'use strict';
 
-	var et = require('libs/eventTarget');
-	var debugUtils = require('libs/eventTarget');
-
 	// Constants
 	var SANDBOX = "SANDBOX";
 	var LINEAIR = "LINEAIR";
