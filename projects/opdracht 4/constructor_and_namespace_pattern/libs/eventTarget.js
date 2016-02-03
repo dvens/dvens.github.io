@@ -66,5 +66,5 @@
 
     window.EventTarget = EventTarget;
 
-});
+}());
 

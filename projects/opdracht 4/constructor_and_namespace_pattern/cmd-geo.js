@@ -177,7 +177,7 @@
 
 	    }
 
-	    _this.currentPositionMarker = new google.maps.Marker({
+	    this.currentPositionMarker = new google.maps.Marker({
 	        position: kaartOpties.center,
 	        map: map,
 	        icon: positieMarker,
@@ -190,4 +190,4 @@
 
 	window.CmdGeo = CmdGeo;
 
-});
+}());

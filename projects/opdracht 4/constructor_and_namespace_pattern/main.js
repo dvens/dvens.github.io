@@ -21,4 +21,4 @@ var APP = APP = {};
 
 	APP.init();
 
-});
+}());
