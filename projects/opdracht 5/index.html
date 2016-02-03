@@ -17,6 +17,8 @@
 </head>
 
 <body>
+
+	
 	
 	<header class="header">
 		
@@ -26,7 +28,7 @@
 
 		<nav class="header__nav">
 			<ul>
-				<li><a href="/">Home</a></li>
+				<li><a href="#/home">Home</a></li>
 				<li><a href="#/about">About</a></li>
 			</ul>
 		</nav>
@@ -34,15 +36,41 @@
 	</header>
 
 	<main>
+		<div id="error"></div>
 		<div class="page" peach-view></div>
 	</main>
+	
+<!-- Define your templates here -->
+<template id="home">
+	
+	<section class="container">
+		
+		<h1>{{title}}</h1>
+		<p>{{content}}</p>
+
+	</section>
+
+</template>
+
+<template id="about">
+
+	<section class="container">
+		
+		<h1>{{title}}</h1>
+		<p>{{content}}</p>
+
+	</section>
+
+</template>
 
 <!-- Begin Libs -->
 <script src="js/libs/peach-min.js"></script>
 
 <!-- Begin Router -->
+<script src="js/router/app-router.js"></script>
 
 <!-- Begin Views -->
+<script src="js/views/app-renderView.js"></script>
 
 <!-- Begin App -->
 <script src="js/app.js"></script>

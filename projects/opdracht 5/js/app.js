@@ -8,6 +8,9 @@ var APP = APP || {};
 
 		init: function() {
 
+			window.location = '#/home';
+			APP.router.init();
+
 		}
 
 	}

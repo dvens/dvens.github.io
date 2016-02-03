@@ -5,15 +5,29 @@ APP.renderView = APP.renderView || {};
 
 	'use strict';
 
-	// load new loader
+	// TODO: Make new loader to get data
 
 	APP.renderView = {
 		
 		home: function() {
 
+			var data = {
+				title: 'Home',
+				content: 'This is home content'
+			};
+
+			Peach.render('home', data );
+
 		}, 
 
-		blog: function() {
+		about: function() {
+
+			var data = {
+				title: 'About',
+				content: 'This is about content'
+			};
+
+			Peach.render('about', data);
 
 		}
 
