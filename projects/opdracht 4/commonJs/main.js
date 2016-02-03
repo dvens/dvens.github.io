@@ -1,25 +1,19 @@
-var APP = APP = {};
+var CmdGeo = require('ui/mapHandler.js');
 
-(function() {
+var _mainInstance = new Main();
+_mainInstance.init();
 
-	'use strict';
 
-	APP.init = function() {
+function Main () {
 
-		var map = new CmdGeo();
-		var element = document.querySelector('main');
+    var _this = this;
+    var _cmdGeo;
 
-		var options = {
-			start: 12,
-			name: 'Amsterdam',
-			data: 'data.json'
-		};
+    _this.init = function () {
 
-		map.init();
-		map.generateMap(options, element);
+       	_cmdGeo = new CmdGeo('main');
 
-	}
+    }
 
-	APP.init();
 
-});
+}

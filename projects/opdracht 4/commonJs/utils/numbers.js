@@ -1,15 +1,11 @@
-(function() {
+'use strict';
 
-	'use strict';
+var numberUtils = {};
 
-	var numberUtils = {};
+numberUtils.isNumber = function(n) {
 
-	numberUtils.isNumber = function(n) {
+	return !isNaN(parseFloat(n)) && isFinite(n);
 
-		return !isNaN(parseFloat(n)) && isFinite(n);
+}
 
-	}
-
-	window.numberUtils = numberUtils;
-
-});
+module.exports = numberUtils;

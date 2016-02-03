@@ -1,70 +1,66 @@
-(function() {
+'use strict';
 
-    'use strict';
+function EventTarget() {
+    
+    this._listeners = {}
 
-    function EventTarget() {
+}
+
+EventTarget.prototype = {
+    
+    constructor: EventTarget,
+    
+    addListener: function(a, c) {
         
-        this._listeners = {}
+        "undefined" == typeof this._listeners[a] && (this._listeners[a] = []);
+        this._listeners[a].push(c);
 
-    }
+    },
 
-    EventTarget.prototype = {
+    fire: function(a) {
         
-        constructor: EventTarget,
+        "string" == typeof a && (a = {
+            
+            type: a
+
+        });
+
+        a.target || (a.target = this);
+
+        if (!a.type) throw Error("Event object missing 'type' property.");
+
+        if (this._listeners[a.type] instanceof Array) {
+            
+            for (var c = this._listeners[a.type], b = 0, d = c.length; b < d; b++) {
+
+                c[b].call(this, a);  
+
+            } 
+
+        }   
+            
+    },
+
+    removeListener: function(a, c) {
         
-        addListener: function(a, c) {
-            
-            "undefined" == typeof this._listeners[a] && (this._listeners[a] = []);
-            this._listeners[a].push(c);
+        if (this._listeners[a] instanceof Array) {
 
-        },
+            for (var b = this._listeners[a], d = 0, e = b.length; d < e; d++) {
 
-        fire: function(a) {
-            
-            "string" == typeof a && (a = {
+                if (b[d] === c) {
                 
-                type: a
-
-            });
-
-            a.target || (a.target = this);
-
-            if (!a.type) throw Error("Event object missing 'type' property.");
-
-            if (this._listeners[a.type] instanceof Array) {
-                
-                for (var c = this._listeners[a.type], b = 0, d = c.length; b < d; b++) {
-
-                    c[b].call(this, a);  
-
-                } 
-
-            }   
-                
-        },
-
-        removeListener: function(a, c) {
-            
-            if (this._listeners[a] instanceof Array) {
-
-                for (var b = this._listeners[a], d = 0, e = b.length; d < e; d++) {
-
-                    if (b[d] === c) {
-                    
-                        b.splice(d, 1);
-                        break;
-
-                    }
+                    b.splice(d, 1);
+                    break;
 
                 }
-                
+
             }
-                    
+            
         }
+                
+    }
 
-    };
+};
 
-    window.EventTarget = EventTarget;
-
-});
+module.exports = EventTarget;
 
