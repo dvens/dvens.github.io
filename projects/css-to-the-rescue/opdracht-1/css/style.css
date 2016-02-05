@@ -389,6 +389,7 @@ button:hover {
     }
 
     footer {
+      -webkit-justify-content: space-between;
       justify-content: space-between;
     }
 
@@ -420,13 +421,16 @@ button:hover {
 
   main > article {
     width: 40em;
+    margin-bottom: 2em;
   }
-
+  
   main {
+    -webkit-justify-content: center;
     justify-content: center;
   }
 
   footer {
+    -webkit-justify-content: space-around;
     justify-content: space-around;
   }
 
