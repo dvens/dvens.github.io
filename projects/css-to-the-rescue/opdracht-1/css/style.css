@@ -289,10 +289,10 @@ footer {
   padding: 2em 1.5em;
   background-color: #2a394f;
 
-  -webkit-flex-flow: column wrap;
-  -moz-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
-  flex-flow: column wrap;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
   footer > * {
@@ -393,7 +393,7 @@ button:hover {
     }
 
     footer > * {
-      width: calc(100% / 3);
+      width: 20em;
     }
 
 }
@@ -424,6 +424,10 @@ button:hover {
 
   main {
     justify-content: center;
+  }
+
+  footer {
+    justify-content: space-around;
   }
 
 }
