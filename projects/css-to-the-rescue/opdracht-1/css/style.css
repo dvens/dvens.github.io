@@ -168,25 +168,25 @@ body > header {
     width: 100%;
   }
 
-  body > header > div h1 {
+  body > header h1 {
     color: white;
     font-size: 1.5em;
     font-family: Ampersand, sans-serif;
   }
 
-  body > header > div figure {
-    max-width: 13em;
+  body > header figure {
+    max-width: 10em;
     padding: 1em;
     margin: 0 auto;
   }
 
-  body > header > div figure img {
+  body > header figure img {
     border-radius: 50%;
     border: 5px solid #6382a9;
     margin-bottom: 0.5rem;
   }
 
-  body > header > div p em {
+  body > header em {
     font-weight: bold;
     font-style: italic;
   }
@@ -202,7 +202,7 @@ body > header nav {
   padding: 1.5em 0;
 }
 
-  body > header > nav ul li a {
+  body > header nav a {
     display: block;
     border-left: 5px solid transparent;
     color: white;
@@ -216,12 +216,12 @@ body > header nav {
     transition: all .2s ease-in;
   }
 
-  body > header > nav ul li a:hover {
+  body > header nav a:hover {
     background-color: #2a394f;
     border-left: 5px solid #15a4fa;
   }
 
-  body > header > nav svg {
+  body > header nav svg {
     height: 1.2em;
     fill: #6382a9;
     margin-right: .5em;
@@ -394,7 +394,7 @@ button:hover {
     }
 
     footer > * {
-      width: 20em;
+      max-width: 10em;
     }
 
 }
