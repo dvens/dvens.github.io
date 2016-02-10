@@ -9,15 +9,22 @@ APP.router = APP.router || {};
 		
 		init: function() {
 
-			Peach.router('/home', function() {
+			Peach.router('/', function() {
 
 				APP.renderView.home();
 
 			});
 
-			Peach.router('/about', function() {
+			Peach.router('/about', function(test) {
 
+				console.log(test);
 				APP.renderView.about();
+
+			});
+
+			Peach.router('/user/:id', function() {
+
+				APP.renderView.user();
 
 			});
 

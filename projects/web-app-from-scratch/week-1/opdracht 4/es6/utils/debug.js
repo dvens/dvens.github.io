@@ -1,6 +1,6 @@
 'use strict';
 
-let debugUtils = {};
+const debugUtils = {};
 
 // DebugUtils properties
 debugUtils.customDebugging = false;

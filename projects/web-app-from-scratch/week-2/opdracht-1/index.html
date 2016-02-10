@@ -21,13 +21,14 @@
 	<header class="header">
 		
 		<a href="#" class="header__logo">
-			<h1>Dylan Vens.</h1>
+			<h1>_imba</h1>
 		</a>
 
 		<nav class="header__nav">
 			<ul>
-				<li><a href="#/home">Home</a></li>
-				<li><a href="#/about">About</a></li>
+				<li><a href="/">Home</a></li>
+				<li><a href="#/discover">Discover</a></li>
+				<li><a href="#/genres">Genres</a></li>
 			</ul>
 		</nav>
 
@@ -39,7 +40,7 @@
 	</main>
 	
 <!-- Define your templates here -->
-<template id="home">
+<template peach-template="home">
 	
 	<section class="container">
 		
@@ -50,7 +51,29 @@
 
 </template>
 
-<template id="about">
+<template peach-template="discover">
+
+	<section class="container">
+
+		<h1>{{title}}</h1>
+		<p>{{movies}}</p>
+
+	</section>
+
+</template>
+
+<template peach-template="genres">
+
+	<section class="container">
+		
+		<h1>{{title}}</h1>
+		<p>{{content}}</p>
+
+	</section>
+
+</template>
+
+<template peach-template="genres-detail">
 
 	<section class="container">
 		
@@ -64,13 +87,20 @@
 <!-- Begin Libs -->
 <script src="js/libs/peach-min.js"></script>
 
-<!-- Begin Router -->
+<!-- App Helpers -->
+<script src="js/helpers/app-xhr.js"></script>
+<script src="js/helpers/app-api.js"></script>
+
+<!-- App Config -->
+<script src="js/app-config.js"></script>
+
+<!-- App Router -->
 <script src="js/router/app-router.js"></script>
 
-<!-- Begin Views -->
-<script src="js/views/app-renderView.js"></script>
+<!-- App Views -->
+<script src="js/views/app-viewrenderer.js"></script>
 
-<!-- Begin App -->
+<!-- App -->
 <script src="js/app.js"></script>
 
 </body>

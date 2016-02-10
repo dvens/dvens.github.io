@@ -8,8 +8,6 @@ var APP = APP || {};
 
 		init: function() {
 
-			// Set window location to home on first entry
-			window.location = '#/home';
 			APP.router.init();
 
 		}

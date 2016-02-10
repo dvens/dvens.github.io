@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head> 
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<title>Everything Web Minor</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="My application"/>
+	<meta name="keywords" content=""/>
+	
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900|Open+Sans:400italic,700italic,800italic,700,400,300,600|Merriweather:900,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+	<header class="header">
+		
+		<a href="#" class="header__logo">
+			<h1>Dylan Vens.</h1>
+		</a>
+
+		<nav class="header__nav">
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="#/about">About</a></li>
+			</ul>
+		</nav>
+
+	</header>
+
+	<main>
+		<div id="error"></div>
+		<div class="page" peach-view></div>
+	</main>
+	
+<!-- Define your templates here -->
+<template peach-template="home">
+	
+	<section class="container">
+		
+		<h1>{{title}}</h1>
+		<p>{{content}}</p>
+
+	</section>
+
+</template>
+
+<template peach-template="about">
+
+	<section class="container">
+		
+		<h1>{{title}}</h1>
+		<p>{{content}}</p>
+
+	</section>
+
+</template>
+
+<template peach-template="user">
+
+	<section class="container">
+		
+		<h1>{{title}}</h1>
+		<p>{{content}}</p>
+
+	</section>
+
+</template>
+
+<!-- Begin Libs -->
+<script src="js/libs/peach-min.js"></script>
+
+<!-- Begin Router -->
+<script src="js/router/app-router.js"></script>
+
+<!-- Begin Views -->
+<script src="js/views/app-viewrenderer.js"></script>
+
+<!-- Begin App -->
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

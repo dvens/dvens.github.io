@@ -5,7 +5,8 @@ APP.renderView = APP.renderView || {};
 
 	'use strict';
 
-	// TODO: Make new loader to get data
+	// TODO: Make new loader to get data and parse page
+	// 
 
 	APP.renderView = {
 		
@@ -28,6 +29,17 @@ APP.renderView = APP.renderView || {};
 			};
 
 			Peach.render('about', data);
+
+		},
+
+		user: function() {
+
+			var data = {
+				title: 'User',
+				content: 'This is user content'
+			};
+
+			Peach.render('user', data);
 
 		}
 

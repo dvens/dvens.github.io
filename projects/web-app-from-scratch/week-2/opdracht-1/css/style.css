@@ -1,0 +1,157 @@
+/*
+  @author : 
+  @Content : 
+  @Code : Dylan Vens
+  @Version 1.0
+
+*/
+
+/* Begin reset */ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a { text-decoration: none;}
+
+/* 
+  **********************
+      Global styling
+  **********************
+*/ 
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html { -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; height: 100%;} 
+
+body {
+  font: 15px 'Open Sans', sans-serif;
+  color: #7d7d7d;
+  background: white;
+  height: 100%;
+}
+
+img { max-width: 100%;}
+
+.container {
+  max-width: 55em;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+main {
+  position: relative;
+  padding-top: 80px;
+}
+
+  [peach-view] section {
+    animation: slide-in 0.5s ease-in-out;
+  }
+
+  @keyframes slide-in {
+    0% { opacity: 0; transform: translateY(1em); }
+  }
+
+/* 
+  **********************
+      Title styling
+  **********************
+*/ 
+
+h1, h2, h3, h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  color: black;
+  font-size: 24px;
+}
+
+h2 {
+  color: black;
+  font-size: 18px;
+}
+
+/* 
+  **********************
+      Header styling
+  **********************
+*/ 
+
+.header {
+  background: #2b3238;
+  height: 5em;
+  position: fixed;
+  padding: 1.6em 1.5em;
+  width: 100%;
+  z-index: 1;
+}
+  
+  .header__logo {
+    display: inline-block;
+    float: left;
+  }
+
+  .header__logo h1 {
+    color: white;
+    text-transform: uppercase;
+  } 
+
+  .header__nav {
+    float: right;
+  }
+
+  .header__nav li {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .header__nav li a {
+    color: white;
+  }
+
