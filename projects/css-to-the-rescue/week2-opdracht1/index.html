@@ -16,7 +16,7 @@
 		<link rel="stylesheet" href="css/style.css">
 		
 	</head>
-	<body>
+	<body class="blur-me">
 	
 		<!-- De header, met een navigatie -->
 		<header role="banner">
@@ -53,11 +53,22 @@
 							Find friends
 						</a>
 					</li>
+					
 				</ul>
 			</nav>
 		</header>
 
+		<div id="profile" class="layover">
+			
+			<figure>
+				<a href="#">x</a>
+				<img src="https://placebear.com/500/500" alt="bear">
+				<figcaption>
+					The polar bear is a carnivorous bear whose native range lies largely within the Arctic Circle, encompassing the Arctic Ocean, its surrounding seas and surrounding land masses.
+				</figcaption>
+			</figure>
 
+		</div>
 
 		<!-- De main content begint hier -->
 		<main role="main">
@@ -70,56 +81,58 @@
 					Guides you through the process of the development of your website and plans accordingly. Mona is the link between clients, collegues and developers.
 				</p>
 				<p>
-					After finishing her study abroad she now aims for beautiful websites with added value. <a href="/">(edit)</a>
+					After finishing her study abroad she now aims for beautiful websites with added value. <a role="link" href="#profile">Click this link for (Intrinsic sizing & De-emphasize by dimming)</a>
 				</p>
 			</article>
 
 
 			<!-- Deze code mag je in week twee uit de comments halen -->
-			<!-- <article id="profile-picture">
+			<article id="profile-picture">
 				<div>
 					<figure class="current-profile-picture">
 						<img class="profile-picture" src="images/profile-picture.jpg">
 					</figure>
 				</div>
-								<div>
+				<div>
 					<header>
-										<h2>Your profile picture</h2>
+						<h2>Your profile picture</h2>
 						<h3>Upload a new profile picture</h3>
 					</header>
 					<a title="Opens upload window" role="button" href="/">Upload</a>
 				</div>
 				<section class="filter-effects">
 					<header>
-								<h3>Select a filter</h3>
+						<h3>Select a filter</h3>
 					</header>
-									<figure class="effect-01">
+					
+					<figure class="effect-01">
 						<img class="profile-picture " src="images/profile-picture.jpg" alt="Image effect: lighten">
 						<figcaption>Lighten</figcaption>
 					</figure>
 
-									<figure class="effect-02">
+					<figure class="effect-02">
 						<img class="profile-picture" src="images/profile-picture.jpg" alt="Image effect: overlay">
 						<figcaption>Overlay</figcaption>
 					</figure>
 
-								<figure class="effect-03">
+					<figure class="effect-03">
 						<img class="profile-picture" src="images/profile-picture.jpg" alt="Image effect: soft light">
 						<figcaption>Soft Light</figcaption>
 					</figure>
 
 					<figure class="effect-04">
-							<img class="profile-picture" src="images/profile-picture.jpg" alt="Image effect: color">
+						<img class="profile-picture" src="images/profile-picture.jpg" alt="Image effect: color">
 						<figcaption>Color</figcaption>
 					</figure>
 
-										<figure class="effect-05">
+					<figure class="effect-05">
 						<img class="profile-picture" src="images/profile-picture.jpg" alt="Image effect: difference">
 						<figcaption>Difference</figcaption>
 					</figure>
+
 				</section>
-						<a role="button" href="/">Save</a>
-			</article> -->
+				<a role="button" href="/">Save</a>
+			</article>
 
 
 			<article id="password">
