@@ -9,14 +9,58 @@ APP.renderView = APP.renderView || {};
 
 	APP.renderView = {
 		
+		// TODO: Cleanup Controllers in sep files
+
 		home: function() {
 
-			var data = {
-				title: 'Home',
-				content: 'This is home content'
-			};
+			function init() {
 
-			Peach.render(AppConfig.routing.home.template, data);
+				var data = {
+					title: 'Home',
+					content: 'Search on your favorite movies'
+				};
+
+				Peach.render(AppConfig.routing.home.template, data);
+				initEvents();
+
+			}
+
+			function initEvents() {
+
+				var searchField = document.querySelector('.search__input');
+				
+				searchField.addEventListener('input', function() {
+					
+					var _value = this.value;
+					search(_value);
+
+				});
+
+			}
+
+			function search(input) {
+
+				var searchResults = document.querySelector('.search__results');
+				
+				if(!input) { searchResults.innerHTML = ''; return } 
+
+				var endPoint = 'search/multi';
+				var query = '?query=' + input;
+				var url = APP.config.APIUrl + endPoint + query +'&api_key=' + APP.config.APIkey;
+
+				APP.api.get(url).then(function(response){
+
+					var data = {
+						movies: response.results
+					};
+
+					searchResults.innerHTML = Peach.render('results', data, 'render');
+
+				});
+
+			}
+
+			init();
 
 		}, 
 
@@ -27,18 +71,16 @@ APP.renderView = APP.renderView || {};
 
 			APP.api.get(url).then(function(response){
 
+				APP.filters.orderByNumberDesc(response.results, 'vote_average');
+
 				var data = {
 					title : 'Discover new movies',
-					movies: response['page']
+					movies: response.results
 				};
-
-				console.log(response);
 
 				Peach.render(AppConfig.routing.discover.template, data);
 
 			});
-
-			
 
 		},
 

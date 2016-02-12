@@ -26,7 +26,7 @@
 
 		<nav class="header__nav">
 			<ul>
-				<li><a href="/">Home</a></li>
+				<li><a href="#/">Home</a></li>
 				<li><a href="#/discover">Discover</a></li>
 				<li><a href="#/genres">Genres</a></li>
 			</ul>
@@ -47,7 +47,46 @@
 		<h1>{{title}}</h1>
 		<p>{{content}}</p>
 
+		<div class="search">
+			
+			<form method="get">
+				<button class="search__button" type="submit"></button>
+				<input class="search__input" type="search" placeholder="Search movies...">	
+			</form>
+
+		</div>
+
+		<div class="search__results"></div>
+
 	</section>
+
+</template>
+
+<template peach-template="results">
+	
+	{% movies.forEach(function(movie){ %}
+		
+		{% if ( movie.poster_path ) { %}
+			<div class="result">
+
+				<div class="result__mask">
+					
+					<img class="result__image" src="https://image.tmdb.org/t/p/w185{{movie.poster_path}}" alt="">
+
+					<div class="result__meta">
+						<p class="result__meta-rating">Rating: {{movie.vote_average}}</p>	
+						<p class="result__meta-vote">Votes: {{movie.vote_count}}</p>	
+					</div>	
+
+				</div>
+				
+				<h2 class="result__title">{{movie.title}}</h2>
+				<p>Release data: {{movie.release_date}}</p>
+				<!-- searching for other solution f<p class="result__overview"></p> -->
+			</div> <!-- end result -->
+		{% } %}
+
+	{% }); %}
 
 </template>
 
@@ -56,7 +95,38 @@
 	<section class="container">
 
 		<h1>{{title}}</h1>
-		<p>{{movies}}</p>
+
+		<div class="filter">
+			<a href="#" data-filter="votes">Filter on votes</a>
+			<span>|</span>
+			<a href="#" data-filter="rating">Filter on rating</a>
+		</div>
+
+		<div class="results">
+		
+		{% movies.forEach(function(movie){ %}
+			
+			<div class="result">
+
+				<div class="result__mask">
+					
+					<img class="result__image" src="https://image.tmdb.org/t/p/w185{{movie.poster_path}}" alt="">
+
+					<div class="result__meta">
+						<p class="result__meta-rating">Rating: {{movie.vote_average}}</p>	
+						<p class="result__meta-vote">Votes: {{movie.vote_count}}</p>	
+					</div>	
+
+				</div>
+				
+				<h2 class="result__title">{{movie.title}}</h2>
+				<p>Release data: {{movie.release_date}}</p>
+				<!-- searching for other solution f<p class="result__overview"></p> -->
+			</div> <!-- end result -->
+
+		{% }); %}
+
+		</div>
 
 	</section>
 
@@ -90,6 +160,7 @@
 <!-- App Helpers -->
 <script src="js/helpers/app-xhr.js"></script>
 <script src="js/helpers/app-api.js"></script>
+<script src="js/helpers/app-filters.js"></script>
 
 <!-- App Config -->
 <script src="js/app-config.js"></script>

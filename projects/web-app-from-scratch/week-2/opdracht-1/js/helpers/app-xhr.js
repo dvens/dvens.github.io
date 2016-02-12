@@ -18,7 +18,7 @@ APP.xhr = APP.xhr || {};
 
 					if (this.status >= 200 && this.status < 300) {
 				        
-				        resolve(xhr.response);
+				        resolve(JSON.parse(xhr.response));
 				    
 				    } else {
 					    

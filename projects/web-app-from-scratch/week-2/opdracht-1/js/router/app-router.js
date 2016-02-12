@@ -9,9 +9,9 @@ APP.router = APP.router || {};
 		
 		init: function() {
 
+			// TODO Add controller like Angular instead of function callback
 			Peach.router('/', function() {
 
-				// first render data then renderview;
 				APP.renderView.home();
 
 			});
