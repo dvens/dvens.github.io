@@ -450,6 +450,8 @@ input {
 /* Layover styling */
 .layover {
   display: none;
+  position: relative;
+  z-index: 1;
 }
 
   .layover figure {

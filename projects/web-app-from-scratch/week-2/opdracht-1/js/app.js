@@ -4,6 +4,7 @@ var APP = APP || {};
 
 	'use strict';
 
+	// Add more comments
 	APP.controller = {
 
 		init: function() {

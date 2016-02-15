@@ -30,7 +30,9 @@ APP.xhr = APP.xhr || {};
 					    reject(error);	
 					}
 
-				}	
+				}
+
+					
 
 				xhr.send();
 			

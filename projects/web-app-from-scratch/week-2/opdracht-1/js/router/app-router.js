@@ -16,6 +16,7 @@ APP.router = APP.router || {};
 
 			});
 
+
 			Peach.router('/discover', function() {
 
 				APP.renderView.discover();
