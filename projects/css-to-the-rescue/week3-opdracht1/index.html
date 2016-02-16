@@ -16,17 +16,21 @@
 		<link rel="stylesheet" href="css/style.css">
 		
 	</head>
-	<body class="blur-me">
+	<body>
 	
-		<!-- De header, met een navigatie -->
 		<header role="banner">
+			
 			<div>
+			
 				<figure>
 					<img src="images/profile-picture-thumb.jpg" alt="Profile picture of Monica Krajeck">
 				</figure>
+			
 				<p>Welcome back, <em>Mona</em></p>
 				<h1>Rescue & Secrets</h1>
+
 			</div>
+			
 			<nav>
 				<ul>
 					<li>
@@ -70,29 +74,32 @@
 
 		</div>
 
-		<!-- De main content begint hier -->
 		<main role="main">
 			<article>
+				
 				<header>
 					<h1>Mona Krajeck <span>@monakrajeck</span></h1>
 					<h2>Soul searching wanderer</h2>
 				</header>
+				
 				<p>
 					Guides you through the process of the development of your website and plans accordingly. Mona is the link between clients, collegues and developers.
 				</p>
+
 				<p>
 					After finishing her study abroad she now aims for beautiful websites with added value. <a role="link" href="#profile">Click this link for (Intrinsic sizing & De-emphasize by dimming)</a>
 				</p>
+
 			</article>
 
-
-			<!-- Deze code mag je in week twee uit de comments halen -->
 			<article id="profile-picture">
+				
 				<div>
 					<figure class="current-profile-picture">
 						<img class="profile-picture" src="images/profile-picture.jpg">
 					</figure>
 				</div>
+
 				<div>
 					<header>
 						<h2>Your profile picture</h2>
@@ -100,7 +107,9 @@
 					</header>
 					<a title="Opens upload window" role="button" href="/">Upload</a>
 				</div>
+
 				<section class="filter-effects">
+					
 					<header>
 						<h3>Select a filter</h3>
 					</header>
@@ -131,36 +140,52 @@
 					</figure>
 
 				</section>
+
 				<a role="button" href="/">Save</a>
+
 			</article>
 
 
 			<article id="password">
+				
 				<header>
 					<h2>Your Password</h2>
 				</header>
 
 				<form action="" method="post">
+					
 					<fieldset>
+						
 						<legend>Change your password:</legend>
+						
 						<label>
 							<span>Current password</span>
 							<input id="current-password" type="password" required>
+							<div></div>
 						</label>
+						
 						<label>
 							<span>New password</span>
 							<input id="current-password" type="password" required>
+							<div></div>
 						</label>
+						
 						<label>
 							<span>Verify new password</span>
 							<input id="current-password" type="password" required>
+							<div></div>
 						</label>
+						
 						<button role="button" type="submit">Yep, change it!</button>
+
 					</fieldset>
+
 				</form>
+
 			</article>
 
 			<article id="photo-albums">
+				
 				<header>
 					<h2>Your photo albums</h2>
 				</header>
@@ -171,56 +196,75 @@
 						Summer 2015
 					</figcaption>
 				</figure>
+				
 				<figure>
 					<img src="images/image-02.jpg" alt="Photoalbum of winter 2015">
 					<figcaption>
 						Winter 2015
 					</figcaption>
 				</figure>
+
 			</article>
-			<!-- Dit mag je in week 3 uit de comments halen. -->
-				<!-- <article id="find-friends">
-					<header>
-						<h2>Find friends</h2>
-						<a href="#password">
-													<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="612" height="612" viewBox="0 0 612 612" xml:space="preserve"><path d="M423.2 438c-3.8 0-7.5-1.4-10.4-4.3L178.4 199.2c-5.7-5.7-5.7-15.1 0-20.8 5.8-5.8 15.1-5.8 20.8 0l234.5 234.5c5.8 5.8 5.8 15.1 0 20.8C430.8 436.5 427 438 423.2 438zM188.8 438c-3.8 0-7.5-1.4-10.4-4.3 -5.7-5.7-5.7-15.1 0-20.8l234.4-234.5c5.8-5.8 15.1-5.8 20.8 0 5.8 5.7 5.8 15.1 0 20.8l-234.4 234.5C196.3 436.5 192.5 438 188.8 438z"/><path d="M306 612v-14.7l0 14.7c-168.7 0-306-137.3-306-306C0 137.3 137.3 0 306 0c168.7 0 306 137.3 306 306C612 474.7 474.7 612 306 612zM306 29.4c-152.5 0-276.6 124.1-276.6 276.6 0 152.5 124.1 276.6 276.6 276.6h0c152.5 0 276.5-124.1 276.5-276.6C582.6 153.5 458.5 29.4 306 29.4z"/></svg>
-												</a>
-					</header>
-									<figure class="effect-01">
+		
+			<article id="find-friends">
+				
+				<header>
+					<h2>Find friends</h2>
+					<a href="#password">
+						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="612" height="612" viewBox="0 0 612 612" xml:space="preserve"><path d="M423.2 438c-3.8 0-7.5-1.4-10.4-4.3L178.4 199.2c-5.7-5.7-5.7-15.1 0-20.8 5.8-5.8 15.1-5.8 20.8 0l234.5 234.5c5.8 5.8 5.8 15.1 0 20.8C430.8 436.5 427 438 423.2 438zM188.8 438c-3.8 0-7.5-1.4-10.4-4.3 -5.7-5.7-5.7-15.1 0-20.8l234.4-234.5c5.8-5.8 15.1-5.8 20.8 0 5.8 5.7 5.8 15.1 0 20.8l-234.4 234.5C196.3 436.5 192.5 438 188.8 438z"/><path d="M306 612v-14.7l0 14.7c-168.7 0-306-137.3-306-306C0 137.3 137.3 0 306 0c168.7 0 306 137.3 306 306C612 474.7 474.7 612 306 612zM306 29.4c-152.5 0-276.6 124.1-276.6 276.6 0 152.5 124.1 276.6 276.6 276.6h0c152.5 0 276.5-124.1 276.5-276.6C582.6 153.5 458.5 29.4 306 29.4z"/></svg>
+					</a>
+				</header>
+				
+				<section class="filter-effects">
+					
+					<figure class="effect-01">
 						<img class="profile-picture " src="images/profile-picture-08.jpg">
-											<figcaption>Sarah S.</figcaption>
+						<figcaption>Sarah S.</figcaption>
 					</figure>
+
 					<figure class="effect-04">
-											<img class="profile-picture " src="images/profile-picture-01.jpg">
+						<img class="profile-picture " src="images/profile-picture-01.jpg">
 						<figcaption>Nerwin B.</figcaption>
 					</figure>
+
 					<figure class="effect-01">
 						<img class="profile-picture " src="images/profile-picture-02.jpg">
 						<figcaption>Lighten</figcaption>
 					</figure>
-										<figure class="effect-03">
+					
+					<figure class="effect-03">
 						<img class="profile-picture " src="images/profile-picture-03.jpg">
-											<figcaption>Lighten</figcaption>
-					</figure>
-					<figure class="effect-01">
-										<img class="profile-picture " src="images/profile-picture-04.jpg">
 						<figcaption>Lighten</figcaption>
 					</figure>
-										<figure class="effect-05">
+
+					<figure class="effect-01">
+						<img class="profile-picture " src="images/profile-picture-04.jpg">
+						<figcaption>Lighten</figcaption>
+					</figure>
+					
+					<figure class="effect-05">
 						<img class="profile-picture " src="images/profile-picture-05.jpg">
-											<figcaption>Lighten</figcaption>
-					</figure>
-					<figure class="effect-01">
-										<img class="profile-picture " src="images/profile-picture-06.jpg">
 						<figcaption>Lighten</figcaption>
 					</figure>
-										<figure class="effect-05">
-						<img class="profile-picture " src="images/profile-picture-07.jpg">
-											<figcaption>Lighten</figcaption>
+
+					<figure class="effect-01">
+						<img class="profile-picture " src="images/profile-picture-06.jpg">
+						<figcaption>Lighten</figcaption>
 					</figure>
-				</article>
-				<div title="Load more articles" class="loader">Loading…</div> -->
-		</main>
+					
+					<figure class="effect-05">
+						<img class="profile-picture " src="images/profile-picture-07.jpg">
+						<figcaption>Lighten</figcaption>
+					</figure>
+
+				</section>
+
+			</article>
+			
+			<div title="Load more articles" class="loader">Loading…</div>
+
+		</main> <!-- end main content -->
+
 		<footer role="contentinfo">
 			<nav>
 				<ul>
