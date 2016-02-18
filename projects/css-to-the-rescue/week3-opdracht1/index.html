@@ -64,17 +64,20 @@
 
 		<div id="profile" class="layover">
 			
-			<figure>
-				<a href="#">x</a>
-				<img src="https://placebear.com/500/500" alt="bear">
-				<figcaption>
-					The polar bear is a carnivorous bear whose native range lies largely within the Arctic Circle, encompassing the Arctic Ocean, its surrounding seas and surrounding land masses.
-				</figcaption>
-			</figure>
+			<div> 
+				<figure>
+					<a href="#test">x</a>
+					<img src="images/profile-picture.jpg" alt="bear">
+					<figcaption>
+						The polar bear is a carnivorous bear whose native range lies largely within the Arctic Circle, encompassing the Arctic Ocean, its surrounding seas and surrounding land masses.
+					</figcaption>
+				</figure>
+			</div>
 
 		</div>
 
 		<main role="main">
+			<div>
 			<article>
 				
 				<header>
@@ -96,7 +99,9 @@
 				
 				<div>
 					<figure class="current-profile-picture">
+						
 						<img class="profile-picture" src="images/profile-picture.jpg">
+
 					</figure>
 				</div>
 
@@ -176,6 +181,11 @@
 							<div></div>
 						</label>
 						
+						<div class="checkbox">
+							<input id="c" type="checkbox">
+							<label for="c">Save password</label>
+						</div>
+						
 						<button role="button" type="submit">Yep, change it!</button>
 
 					</fieldset>
@@ -191,17 +201,23 @@
 				</header>
 
 				<figure>
-					<img src="images/image-01.jpg" alt="Photoalbum of Summer 2015">
+					
+					<img class="image-zoom" src="images/image-01.jpg" alt="Photoalbum of Summer 2015">
+
 					<figcaption>
 						Summer 2015
 					</figcaption>
+
 				</figure>
 				
 				<figure>
-					<img src="images/image-02.jpg" alt="Photoalbum of winter 2015">
+					
+					<img class="image-zoom" src="images/image-02.jpg" alt="Photoalbum of winter 2015">
+					
 					<figcaption>
 						Winter 2015
 					</figcaption>
+
 				</figure>
 
 			</article>
@@ -210,9 +226,6 @@
 				
 				<header>
 					<h2>Find friends</h2>
-					<a href="#password">
-						<svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="612" height="612" viewBox="0 0 612 612" xml:space="preserve"><path d="M423.2 438c-3.8 0-7.5-1.4-10.4-4.3L178.4 199.2c-5.7-5.7-5.7-15.1 0-20.8 5.8-5.8 15.1-5.8 20.8 0l234.5 234.5c5.8 5.8 5.8 15.1 0 20.8C430.8 436.5 427 438 423.2 438zM188.8 438c-3.8 0-7.5-1.4-10.4-4.3 -5.7-5.7-5.7-15.1 0-20.8l234.4-234.5c5.8-5.8 15.1-5.8 20.8 0 5.8 5.7 5.8 15.1 0 20.8l-234.4 234.5C196.3 436.5 192.5 438 188.8 438z"/><path d="M306 612v-14.7l0 14.7c-168.7 0-306-137.3-306-306C0 137.3 137.3 0 306 0c168.7 0 306 137.3 306 306C612 474.7 474.7 612 306 612zM306 29.4c-152.5 0-276.6 124.1-276.6 276.6 0 152.5 124.1 276.6 276.6 276.6h0c152.5 0 276.5-124.1 276.5-276.6C582.6 153.5 458.5 29.4 306 29.4z"/></svg>
-					</a>
 				</header>
 				
 				<section class="filter-effects">
@@ -229,39 +242,42 @@
 
 					<figure class="effect-01">
 						<img class="profile-picture " src="images/profile-picture-02.jpg">
-						<figcaption>Lighten</figcaption>
+						<figcaption>Alwin Z.</figcaption>
 					</figure>
 					
 					<figure class="effect-03">
 						<img class="profile-picture " src="images/profile-picture-03.jpg">
-						<figcaption>Lighten</figcaption>
+						<figcaption>Peach B.</figcaption>
 					</figure>
 
 					<figure class="effect-01">
 						<img class="profile-picture " src="images/profile-picture-04.jpg">
-						<figcaption>Lighten</figcaption>
+						<figcaption>Blue Y.</figcaption>
 					</figure>
 					
 					<figure class="effect-05">
 						<img class="profile-picture " src="images/profile-picture-05.jpg">
-						<figcaption>Lighten</figcaption>
+						<figcaption>Alwin B.</figcaption>
 					</figure>
 
-					<figure class="effect-01">
+					<figure class="effect-01" disabled>
 						<img class="profile-picture " src="images/profile-picture-06.jpg">
-						<figcaption>Lighten</figcaption>
+						<figcaption>Jasper H.</figcaption>
 					</figure>
 					
-					<figure class="effect-05">
+					<figure class="effect-05" disabled>
 						<img class="profile-picture " src="images/profile-picture-07.jpg">
-						<figcaption>Lighten</figcaption>
+						<figcaption>Native B.</figcaption>
 					</figure>
 
 				</section>
 
 			</article>
 			
-			<div title="Load more articles" class="loader">Loading…</div>
+			<div title="Load more articles" class="loader">
+				<div></div>
+			</div>
+			</div>
 
 		</main> <!-- end main content -->
 
