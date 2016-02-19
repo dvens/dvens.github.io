@@ -1,0 +1,80 @@
+.menu-open {
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-open nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.navigation {
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
+
+  text-align: left;
+  background: #272D32;
+  width: 100%;
+  top: 5em;
+  left: 0;
+  
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+  z-index: 10;
+
+  li {
+    margin: 0;
+    float: none;
+    cursor: pointer;
+    
+    &.active {
+      background-color: #26292b;
+    }
+
+  }
+
+  a {
+    display: block;
+    border-bottom: 1px solid #3f474e;
+    margin: 0 1.25em;
+    padding: 1.5625em 0.375em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $color-white;
+    text-decoration: none;
+  }
+
+  li:hover, li.active, a:hover {
+    background-color: #26292b;
+    color: white;
+  }
+
+}
+
+@media only screen and (min-width : 35em){ 
+    
+  .menu-open .navigation {
+    -webkit-transform: translate3d(0px, 0, 0);
+    -o-transform: translate3d(0px, 0, 0);
+    transform: translate3d(0px, 0, 0);
+  }
+
+  .navigation {
+    position: fixed;
+    opacity: 1;
+    visibility: visible;
+    width: 275px;
+    height: 100%;
+    top: 0px;
+    transform: translate3d(-275px, 0, 0);
+    -webkit-backface-visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.712, 0.0376, 0.392, 1);
+
+    ul {
+      margin-top: 3.125em;
+    }
+  }
+
+}

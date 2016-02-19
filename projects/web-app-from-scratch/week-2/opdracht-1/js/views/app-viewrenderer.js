@@ -69,6 +69,8 @@ APP.renderView = APP.renderView || {};
 			var endPoint = 'discover/movie';
 			var url = APP.config.APIUrl + endPoint +'?api_key=' + APP.config.APIkey;
 
+			console.log(url);
+
 			APP.api.get(url).then(function(response){
 
 				APP.filters.orderByNumberDesc(response.results, 'vote_average');
