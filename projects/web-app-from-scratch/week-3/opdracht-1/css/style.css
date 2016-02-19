@@ -1,0 +1,244 @@
+/*
+  @author : 
+  @Content : 
+  @Code : Dylan Vens
+  @Version 1.0
+
+*/
+
+/* Begin reset */ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a { text-decoration: none;}
+
+/* 
+  **********************
+      Global styling
+  **********************
+*/ 
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html { -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; height: 100%;} 
+
+body {
+  font: 100% 'Open Sans', sans-serif;
+  color: #7d7d7d;
+  background: white;
+  height: 100%;
+}
+
+img { max-width: 100%;}
+
+.container {
+  max-width: 55em;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+main {
+  position: relative;
+  padding-top: 80px;
+}
+
+  [peach-view] section {
+    animation: slide-in 0.5s ease-in-out;
+  }
+
+  @keyframes slide-in {
+    0% { opacity: 0; transform: translateY(1em); }
+  }
+
+/* 
+  **********************
+      Title styling
+  **********************
+*/ 
+
+h1, h2, h3, h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  color: black;
+  font-size: 24px;
+}
+
+h2 {
+  color: black;
+  font-size: 18px;
+}
+
+/* 
+  **********************
+      Header styling
+  **********************
+*/ 
+
+.header {
+  background: #2b3238;
+  height: 5em;
+  position: fixed;
+  padding: 1.6em 1.5em;
+  width: 100%;
+  z-index: 1;
+}
+  
+  .header__logo {
+    display: inline-block;
+    float: left;
+  }
+
+  .header__logo h1 {
+    color: white;
+    text-transform: uppercase;
+  } 
+
+  .header__nav {
+    float: right;
+  }
+
+  .header__nav li {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+
+  .header__nav li a {
+    color: white;
+  }
+
+/* Styling results */
+.results .result:nth-child(4n) {
+  margin-right: 0;
+}
+
+.result {
+  height: 24em;
+  width: 23%;
+  float: left;
+  margin-right: 2%;
+  margin-bottom: 1em;
+} 
+  
+  .result__mask {
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    height: 18em;
+    overflow: hidden;
+    margin-bottom: 1em;
+  }
+
+  .result__image {
+    width: 100%;
+  }
+
+  .result__meta {
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 2em;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform .2s ease-in;
+  }
+
+  .result__mask:hover .result__meta {
+    transform: translateY(0);
+  }
+
+.filter {
+  margin-bottom: 25px;
+}
+
+.filter a {
+  color: tomato;
+}
+
+.search {
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.search form {
+  border-bottom: 1px solid #979797;
+  margin: 0 auto;
+  padding: 0 0 15px 10px;
+  width: 100%;
+}
+
+.search__button {
+  background: url('../assets/images/icon-search.svg');
+  background-size: cover;
+  border: none;
+  height: 22px;
+  float: left;
+  margin-right: 20px;
+  outline: 0;
+  width: 22px;
+}
+
+.search__input {
+  border: none;
+  background: 0 0;
+  color: #323232;
+  font-size: 18px;
+  height: 25px;
+  outline: 0;
+  width: 90%;
+}
+
+
+
+
