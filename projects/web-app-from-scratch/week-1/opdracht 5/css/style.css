@@ -60,8 +60,6 @@ a { text-decoration: none;}
 */ 
 
 * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -88,11 +86,16 @@ main {
 }
 
   [peach-view] section {
-    animation: slide-in 0.5s ease-in-out;
+    -webkit-animation: slide-in 0.5s ease-in-out;
+            animation: slide-in 0.5s ease-in-out;
+  }
+
+  @-webkit-keyframes slide-in {
+    0% { opacity: 0; -webkit-transform: translateY(1em); transform: translateY(1em); }
   }
 
   @keyframes slide-in {
-    0% { opacity: 0; transform: translateY(1em); }
+    0% { opacity: 0; -webkit-transform: translateY(1em); transform: translateY(1em); }
   }
 
 /* 

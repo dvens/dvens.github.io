@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head> 
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+	<title>Everything Web Minor</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="description" content="Everything Web Minor"/>
+	<meta name="keywords" content=""/>
+	
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900|Open+Sans:400italic,700italic,800italic,700,400,300,600|Merriweather:900,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+	<!-- Keep the order of the sections :) this is hacky -->
+	<span id="home"></span>
+	<span id="webapp"></span>
+	<span id="css"></span>
+	<span id="blog"></span>
+
+	<nav role="navigation">
+		<ul>
+			<li>
+				<a href="#home">
+					<span></span>
+					<span>home</span>
+				</a>
+			</li>
+			<li>
+				<a href="#webapp">
+					<span></span>
+					<span>web app from scratch</span>
+				</a>
+			</li>
+			<li>
+				<a href="#css">
+					<span></span>
+					<span>css to the rescue</span>
+				</a>
+			</li>
+			<li>
+				<a href="#blog">
+					<span></span>
+					<span>weekly nerd</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main role="main">
+		
+		<article class="page">
+			
+			<section>
+				<h1>
+					Hi there, I’m <span>Dylan</span> and this is my exercise overview for the Web App From Scratch minor.
+				</h1>
+				<p>
+					This page is build with pure CSS (even all the animations). This is page is an overview with all my current and upcoming exercises for this minor. Remember pure CSS ;)
+				</p>
+			</section>
+
+		</article>
+
+		<article class="page">
+			
+			<section>
+				<h1>
+					Hi again, This is my <span>Web App From Scratch</span> exercise section.
+				</h1>
+			</section>
+
+			<section> 
+				
+				<div>
+					<h2>Week 1</h2>
+					<ul>
+						<li><a href="https://github.com/dvens/dvens.github.io/tree/master/projects/web-app-from-scratch/week-1/opdracht%202" target="_blank">Pro & Cons Javascript libraries</a></li>
+						<li><a href="https://github.com/dvens/dvens.github.io/tree/master/projects/web-app-from-scratch/week-1/opdracht%203" target="_blank">Pros & Cons SPA's</a></li>
+						<li><a href="https://github.com/dvens/dvens.github.io/tree/master/projects/web-app-from-scratch/week-1/opdracht%204/es6" target="_blank">ES6 first try</a></li>
+						<li><a href="https://github.com/dvens/dvens.github.io/tree/master/projects/web-app-from-scratch/week-1/opdracht%204/commonJs" target="_blank">CommonJS</a></li>
+						<li><a href="https://github.com/dvens/dvens.github.io/tree/master/projects/web-app-from-scratch/week-1/opdracht%205" target="_blank">Web Application</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<h2>Week 2</h2>
+					<ul>
+						<li><a href="https://github.com/dvens/dvens.github.io/tree/master/projects/web-app-from-scratch/week-2/opdracht-1" target="_blank">Data, Routing and Templating</a></li>
+					</ul>
+				</div>	
+
+				<div>
+					<h2>Week 3</h2>
+					<ul>
+						<li><a href="https://github.com/dvens/dvens.github.io/tree/master/projects/web-app-from-scratch/week-3/opdracht-1" target="_blank">Completed Web APP</a></li>
+					</ul>
+				</div>		
+
+			</section>
+
+		</article>
+
+		<article class="page">
+			
+			<section>
+				<h1>
+					Hi again, This is my <span>CSS To The Rescue</span> exercise section.
+				</h1>
+			</section>
+
+			<section> 
+				
+				<div>
+					<h2>Week 1</h2>
+					<ul>
+						<li><a href="https://github.com/dvens/dvens.github.io/tree/master/projects/css-to-the-rescue/opdracht-1" target="_blank">Flexbox & Ampersand</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<h2>Week 2</h2>
+					<ul>
+						<li><a href="https://github.com/dvens/dvens.github.io/tree/master/projects/css-to-the-rescue/week2-opdracht1" target="_blank">Intrinsic sizing & De-emphasize by dimming</a></li>
+					</ul>
+				</div>
+
+				<div>
+					<h2>Week 3</h2>
+					<ul>
+						<li><a href="https://github.com/dvens/dvens.github.io/tree/master/projects/css-to-the-rescue/week3-opdracht1" target="_blank">Transitions, loaders and cursors</a></li>
+					</ul>
+				</div>
+
+			</section>
+
+		</article>
+
+		<article class="page">
+			
+			<section>
+				<h1>
+					Hi again, This is my <span>Weekly Nerd</span> blog.
+				</h1>
+			</section>
+
+			<section class="-mgt-sm"> 
+				
+				<div>
+					<ul>
+						<li><a href="#" target="_blank">Drububu and Webworkers</a></li>
+					</ul>
+				</div>
+
+			</section>
+
+		</article>
+
+	</main>
+
+</body>
+
+</html>
