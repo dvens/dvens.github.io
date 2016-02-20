@@ -79,6 +79,9 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   line-height: 1.6;
+
+  -webkit-animation: randombackground 100s infinite;
+  animation: randombackground 100s infinite;
 }
 
 img {
@@ -169,6 +172,26 @@ p {
 */
 
 @keyframes randombackground {
+  0% {
+    background: #FF512F; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FF512F , #F09819); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FF512F , #F09819); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  50% {
+    background: #e53935; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #e53935 , #e35d5b); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #e53935 , #e35d5b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */     
+  }
+
+  100% {
+    background: #02AAB0; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #02AAB0 , #00CDAC); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #02AAB0 , #00CDAC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */       
+  }
+}
+
+@-webkit-keyframes randombackground {
   0% {
     background: #FF512F; /* fallback for old browsers */
     background: -webkit-linear-gradient(to left, #FF512F , #F09819); /* Chrome 10-25, Safari 5.1-6 */
