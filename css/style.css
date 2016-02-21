@@ -61,6 +61,8 @@ a { text-decoration: none;}
 
 * {
   box-sizing: border-box;
+  -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 html,
