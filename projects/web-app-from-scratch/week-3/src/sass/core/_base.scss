@@ -1,0 +1,100 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box; // Better box model - http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: $color-background;
+	overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+  opacity: 0;
+}
+
+html, body, button {
+    -webkit-tap-highlight-color: transparent; // http://stackoverflow.com/questions/5210481/disable-orange-outline-highlight-on-focus
+}
+
+body {
+    min-height: 100%;
+    font-size: 100%;
+}
+
+table {
+    width: 100%;
+}
+
+th, td {
+    vertical-align: top;
+}
+
+iframe {
+    border: 0;
+    display: block;
+}
+
+body.loaded {
+  opacity: 1;
+}
+
+main {
+    padding-top: 5em;
+}
+
+.page__container {
+    max-width: 55em;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+[peach-controller] {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .2s ease-in;
+}
+
+[peach-cloak] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+[peach-view] {
+  padding: 1em;
+  
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0px);
+
+  transition: all .3s ease-in-out;
+
+  transition-delay: .2s;
+}
+
+    [peach-view].peach-transition {
+
+        transform: translateY(10px);
+
+        opacity: 0;
+        visibility: hidden;
+
+    }
+
+  [peach-view-holder] {
+    display: none;
+  }
+
+    body, body > header, main {
+      -webkit-backface-visibility: hidden;
+      transition: all 0.3s cubic-bezier(0.712, 0.0376, 0.392, 1);
+    }
