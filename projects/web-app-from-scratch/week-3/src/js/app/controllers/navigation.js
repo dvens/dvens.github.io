@@ -13,26 +13,30 @@ app.controller('navigation', [function(
     var _menu = Ld('.header__menu-trigger');
     var _elNav = document.querySelectorAll('.navigation ul li a, .header__logo');
     
-	function init() {
+    var navigation = {};
 
-		initEvents();
+	navigation.init = function() {
+
+		this.initEvents();
 
 	}
 
-	function initEvents() {
+	navigation.initEvents = function() {
+
+		var _this = this;
 
 		window.addEventListener('load', function(){
-	        setMenuText();
-	        setMenu();
+	        _this.setMenuText();
+	        _this.setMenu();
 	    });
 
 	    window.addEventListener('hashchange', function(){
-	        setMenuText();
-	        setMenu();
+	        _this.setMenuText();
+	        _this.setMenu();
 	    });
 	}
 
-	function setMenuText () {
+	navigation.setMenuText = function() {
 
 		var _location = window.location.hash.slice(1).split('/') || 'home';
 		var _text;
@@ -51,7 +55,7 @@ app.controller('navigation', [function(
 
 	}
 
-	function setMenu() {
+	navigation.setMenu = function() {
 
 		_menu.addListener('click', function(e){
 
@@ -84,6 +88,6 @@ app.controller('navigation', [function(
 
 	}
 
-	init();
+	navigation.init();
 
 }]);

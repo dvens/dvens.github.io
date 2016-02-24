@@ -1,40 +1,13 @@
 @@include('./src/html/includes/_base/head.html')
 @@include('./src/html/includes/_base/header.html')
 
+<div class="loader"></div>
+
 <main role="main">
-	<div class="loader"></div>
 	<div class="page" peach-view></div>
 	<div peach-view-holder></div>
 </main>
 
-<template peach-template="results">
-	
-	{% movies.forEach(function(movie){ %}
-		
-		{% if ( movie.poster_path ) { %}
-			<div class="result">
-
-				<div class="result__mask">
-					
-					<img class="result__image" src="https://image.tmdb.org/t/p/w185{{movie.poster_path}}" alt="">
-
-					<div class="result__meta">
-						<p class="result__meta-rating">Rating: {{movie.vote_average}}</p>	
-						<p class="result__meta-vote">Votes: {{movie.vote_count}}</p>	
-					</div>	
-
-				</div>
-				
-				<a href="#/detail/{{movie.id}}">
-					<h2 class="result__title">{{movie.title}}</h2>
-				</a>
-				<p>Release data: {{movie.release_date}}</p>
-				<!-- searching for other solution f<p class="result__overview"></p> -->
-			</div> <!-- end result -->
-		{% } %}
-
-	{% }); %}
-
-</template>
+@@include('./src/html/includes/content/templates.html')
 	
 @@include('./src/html/includes/_base/footer.html')

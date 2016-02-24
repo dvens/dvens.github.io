@@ -1,0 +1,61 @@
+<template peach-template="detail-page">
+	
+	<div class="page__overlay"></div>
+	<div class="page__image" style="background-image: url(https://image.tmdb.org/t/p/w185{{movie.poster_path}})"></div>
+	<a class="page__button" href="#/"> <i class="material-icons">keyboard_backspace</i></a>
+
+	<section id="detail-page" class="page__container detail">
+
+		<div class="grid__row">
+			
+			<div class="grid__column-8">
+				<h1>{{movie.title}}</h1>
+				<p class="detail__time">{{movie.runtime}} min - </p>
+				<ul class="detail__genre-list">
+					{% movie.genres.forEach(function(genre){ %}
+						
+						<li><a href="#/genre/{{genre.id}}">{{genre.name}}</a></li>
+
+					{% }); %}
+				</ul>
+			</div>
+
+			<div class="grid__column-4">
+				<p class="detail__rating">{{movie.vote_average}}</p>
+			</div>
+
+		</div>
+
+		<div class="grid__row">
+			<div class="grid__column-6 -pdb-sm">
+				<img src="https://image.tmdb.org/t/p/w185{{movie.poster_path}}" alt="">
+			</div>
+		</div>
+
+		<div class="grid__row">
+			
+			<div class="grid__column-8">
+				<p class="detail__overview">Movie overview: {{movie.overview}}</p>
+			</div>
+
+		</div>
+		
+		<span class="detail__line"></span>
+
+		<div class="grid__row">
+			
+			<div class="grid__column-12">
+				<p><strong>Movie Budget: </strong> {{movie.budget}}</p>
+				<p><strong>Movie release date: </strong> {{movie.release_date}}</p>
+				<p><strong>Status: </strong>{{movie.status}}</p>
+				<p>
+					<strong>Website link:</strong>
+					<a class="detail__link" href="{{movie.homepage}}" target="_blank">{{movie.homepage}}</a>
+				</p>
+			</div>
+
+		</div>
+
+	</section>
+
+</template>

@@ -1,28 +1,22 @@
-app.service('detail-service', ['pageLoader', function(
+app.service('detail-service', ['pageLoader', 'api', function(
 
 	pageLoader,
+	api,
 	$config,
 	$tools
 
 ){
 
-	var endPoint = 'movie/';
+	var _endPoint = 'movie/';
+	var detailService = {};
 
-	function getMovie(id) {
+	detailService.getMovie = function(id) {
 
-		var query = id;
-		var url = $config.APIUrl + endPoint + query +'&api_key=' + $config.APIkey;
-
-		console.log(url);
-
-		pageLoader.toggleLoader('show');
-
-		return $tools.$xhr('get', url);
+		var _url = _endPoint + id + '?api_key=';
+		return api.get(_url);
 
 	}
 
-	return {
-		getMovie: getMovie
-	}
+	return detailService;
 
 }]);

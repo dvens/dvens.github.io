@@ -8,14 +8,17 @@ app.controller('home', ['pageLoader', 'search-service' , function(
 
 ) {
 
-	function init() {
+	var home = {};
 
-		loadTemplate();
+	home.init = function() {
+
+		this.loadTemplate();
 
 	}
 
-	function loadTemplate() {
+	home.loadTemplate = function() {
 
+		var _this = this;
 		var data = {
 			title: 'Home',
 			content: 'Search for your favorite movies'
@@ -25,26 +28,27 @@ app.controller('home', ['pageLoader', 'search-service' , function(
 		
 		pageLoader.loadTemplate($tools.$route.template, $tools.$route.templateId, data, function(){
 			
-			initEvents();
+			_this.initEvents();
 
 		});
 		
 	}
 
-	function initEvents() {
+	home.initEvents = function() {
 		
+		var _this = this;
 		var searchField = document.querySelector('.search__input');
 		
 		searchField.addEventListener('input', function() {
 			
 			var _value = this.value;
-			search(_value);
+			_this.search(_value);
 
 		});
 
 	}
 
-	function search(value) {
+	home.search = function(value) {
 
 		var searchResults = document.querySelector('.search__results');
 		if(!value) { searchResults.innerHTML = ''; return }
@@ -70,6 +74,6 @@ app.controller('home', ['pageLoader', 'search-service' , function(
 
 	}
 
-	init();
+	home.init();
 
 }]);

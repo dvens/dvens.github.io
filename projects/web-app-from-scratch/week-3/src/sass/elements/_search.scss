@@ -3,7 +3,7 @@
   margin-bottom: 30px;
 
   form {
-    border-bottom: 1px solid #979797;
+    border-bottom: 1px solid $color-white;
     margin: 0 auto;
     padding: 0 0 15px 10px;
     width: 100%;
@@ -25,11 +25,16 @@
   .search__input {
     border: none;
     background: 0 0;
-    color: #323232;
+    color: $color-white;
     font-size: 18px;
     height: 25px;
     outline: 0;
     width: 85%;
+
+    &::placeholder {
+      color: $color-white;
+    }
+
   }
 
   @media only screen and (min-width : 35em){ 

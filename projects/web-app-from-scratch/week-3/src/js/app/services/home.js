@@ -1,23 +1,20 @@
-app.service('search-service', ['pageLoader', function(
+app.service('search-service', ['pageLoader', 'api', function(
 
 	pageLoader,
+	api,
 	$config,
 	$tools
 
 ){
 
-	var endPoint = 'search/multi';
+	var endPoint = 'search/movie';
 
 	function getSearch(input) {
 
 		var query = '?query=' + input;
-		var url = $config.APIUrl + endPoint + query +'&api_key=' + $config.APIkey;
+		var url = endPoint + query + '&api_key=';
 
-		console.log(url);
-
-		pageLoader.toggleLoader('show');
-
-		return $tools.$xhr('get', url);
+		return api.get(url);
 
 	}
 

@@ -1,0 +1,29 @@
+<template peach-template="results">
+	
+	{% movies.forEach(function(movie){ %}
+		
+		{% if ( movie.poster_path ) { %}
+			<div class="result">
+
+				<div class="result__mask">
+					
+					<img class="result__image" src="https://image.tmdb.org/t/p/w185{{movie.poster_path}}" alt="">
+
+					<div class="result__meta">
+						<p class="result__meta-rating">Rating: {{movie.vote_average}}</p>	
+						<p class="result__meta-vote">Votes: {{movie.vote_count}}</p>	
+					</div>	
+
+				</div>
+				
+				<a href="#/movie/{{movie.id}}">
+					<h2 class="result__title">{{movie.title}}</h2>
+				</a>
+				<p>Release data: {{movie.release_date}}</p>
+				<!-- searching for other solution f<p class="result__overview"></p> -->
+			</div> <!-- end result -->
+		{% } %}
+
+	{% }); %}
+
+</template>

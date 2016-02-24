@@ -1,0 +1,18 @@
+<template peach-template="home">
+	
+	<section id="home" class="page__container">
+		
+		<h1>{{title}}</h1>
+		
+		{% houses.forEach(function(house){ %}
+			
+			<img src="{{house.Foto}}" alt="">
+			<a href="#/house/{{house.Id}}">Adres: {{house.Adres}}</a>
+			<p>Postcode: {{house.Postcode}}</p>
+			<p>Woonplaats: {{house.Woonplaats}}</p>
+		
+		{% }); %}
+
+	</section>
+
+</template>

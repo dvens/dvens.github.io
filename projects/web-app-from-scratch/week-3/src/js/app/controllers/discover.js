@@ -1,74 +1,48 @@
 'use strict';
 
-app.controller('discover', ['pageLoader', function(
+app.controller('discover', ['pageLoader', 'discover-service', 'filters', function(
 
 	pageLoader,
+	discoverService,
+	filters,
 	$tools
 
 ) {
 
-	function orderByNumberAsc(array, key) {
+	var discover = {};
 
-		var input = array;
+	discover.init = function() {
 
-		input.sort(function(a, b) {
-			return a[key] - b[key];
+		this.loadData();
+
+	}
+
+	discover.loadData = function() {
+
+		var _this = this;
+
+		discoverService.getMovies().then(function(response){
+
+			var _data = JSON.parse(response);
+			filters.orderByNumberDesc(_data.results, 'vote_average');
+			_this.loadTemplate(_data.results);
+
 		});
 
 	}
 
-	// Smallest to largest
-	function orderByNumberDesc(array, key) {
+	discover.loadTemplate = function(data) {
 
-		var input = array;
-
-		input.sort(function(a, b) {
-			return b[key] - a[key];
-		});
-
-	}
-
-	function init() {
-
-		loadTemplate();
-
-	}
-
-	function loadTemplate() {
-
+		var _this = this;
 		var data = {
-			title: 'Discover',
-			content: ''
+			title: 'Discover new movies',
+			movies: data
 		};
 
-		var endPoint = 'discover/movie';
-		var url = 'http://api.themoviedb.org/3/' + endPoint +'?api_key=' + '6cb38eaa7fe8c8602cce052374cdf3ad';
-
-		// console.log($tools);
-
-		// $tools.$xhr(url).then(function(response){
-
-		// 	var _reponse = JSON.parse(reponse)
-
-		// 	orderByNumberDesc(_response.results, 'vote_average');
-
-		// 	var data = {
-		// 		title : 'Discover new movies',
-		// 		movies: _response.results
-		// 	};
-
-
-		// });
-
-		pageLoader.toggleLoader('show');
-	
-			pageLoader.loadTemplate($tools.$route.template, $tools.$route.templateId, data, function() {
-
-		});
-
+		pageLoader.loadTemplate($tools.$route.template, $tools.$route.templateId, data);
 
 	}
 
-	init();
+	discover.init();
 
 }]);

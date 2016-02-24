@@ -13,8 +13,8 @@ html {
 }
 
 html, body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -52,9 +52,45 @@ main {
 }
 
 .page__container {
-    max-width: 55em;
-    margin: 0 auto;
-    padding: 60px 20px;
+  max-width: 55em;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.page__button {
+  position: absolute;
+  top: 20px;
+  color: $color-white;
+  
+  > i {
+    font-size: 40px;
+  }
+
+}
+
+.page__overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: -1;
+
+  position: fixed;
+}
+
+.page__image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  z-index: -2;
+  filter: blur(20px);
+  -webkit-filter: blur(20px);
 }
 
 [peach-controller] {
@@ -81,20 +117,20 @@ main {
   transition-delay: .2s;
 }
 
-    [peach-view].peach-transition {
+  [peach-view].peach-transition {
 
-        transform: translateY(10px);
+      transform: translateY(10px);
 
-        opacity: 0;
-        visibility: hidden;
+      opacity: 0;
+      visibility: hidden;
 
-    }
+  }
 
   [peach-view-holder] {
     display: none;
   }
 
-    body, body > header, main {
-      -webkit-backface-visibility: hidden;
-      transition: all 0.3s cubic-bezier(0.712, 0.0376, 0.392, 1);
-    }
+  body, body > header, main {
+    -webkit-backface-visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.712, 0.0376, 0.392, 1);
+  }

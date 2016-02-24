@@ -9,8 +9,8 @@ app.setAppConfig(function() {
 	config.templateUrl = 'views';
 
 	config.name = 'Web App From Scratch';
-	config.APIkey = '6cb38eaa7fe8c8602cce052374cdf3ad';
-	config.APIUrl = 'http://api.themoviedb.org/3/';
+	config.apiKey = '6cb38eaa7fe8c8602cce052374cdf3ad';
+	config.apiUrl = 'http://api.themoviedb.org/3/';
 
 	config.routing = {
 
@@ -30,20 +30,12 @@ app.setAppConfig(function() {
 			controller: 'discover'
 		},
 
-		genres: {
-			title: 'Genres',
-			url: '/genres',
-			template: 'genres.html',
-			templateId: 'genres',
-			controller: 'genres'
-		},
-
 		detail: {
 			title: 'Detail',
-			url: '/detail/:id',
-			template: 'detail.html',
-			templateId: 'detail',
-			controller: 'detail'
+			url: '/movie/:id',
+			template: 'detail-page.html',
+			templateId: 'detail-page',
+			controller: 'detail-page'
 		}
 
 	};

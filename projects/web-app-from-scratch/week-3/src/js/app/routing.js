@@ -6,39 +6,43 @@ app.run('init', function($config) {
 	var _body = document.querySelector('body');
 	var _timer;
 
-	firstLoad();
+	var routing = {};
 
-	app
-		.route({
-			url: $config.routing.home.url,
-			template: $config.routing.home.template,
-			templateId: $config.routing.home.templateId,
-			controller: $config.routing.home.controller
-		})
+	routing.init = function() {
 
-		.route({
-			url: $config.routing.discover.url,
-			template: $config.routing.discover.template,
-			templateId: $config.routing.discover.templateId,
-			controller: $config.routing.discover.controller
-		})
+		this.setRouting();
+		this.firstLoad();
+		
+	}
 
-		.route({
-			url: $config.routing.genres.url,
-			template: $config.routing.genres.template,
-			templateId: $config.routing.genres.templateId,
-			controller: $config.routing.genres.controller
-		})
+	routing.setRouting = function() {
 
-		.route({
-			url: $config.routing.detail.url,
-			template: $config.routing.detail.template,
-			templateId: $config.routing.detail.templateId,
-			controller: $config.routing.detail.controller
-		});
+		app
+			.route({
+				url: $config.routing.home.url,
+				template: $config.routing.home.template,
+				templateId: $config.routing.home.templateId,
+				controller: $config.routing.home.controller
+			})
+
+			.route({
+				url: $config.routing.discover.url,
+				template: $config.routing.discover.template,
+				templateId: $config.routing.discover.templateId,
+				controller: $config.routing.discover.controller
+			})
+
+			.route({
+				url: $config.routing.detail.url,
+				template: $config.routing.detail.template,
+				templateId: $config.routing.detail.templateId,
+				controller: $config.routing.detail.controller
+			});
 
 
-	function firstLoad() {
+	}
+
+	routing.firstLoad = function() {
 
 		if( _firsttime ) {
 
@@ -53,5 +57,7 @@ app.run('init', function($config) {
 		}
 		
 	}
+
+	routing.init();
 
 });
