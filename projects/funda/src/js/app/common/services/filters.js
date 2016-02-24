@@ -12,7 +12,7 @@ app.service('filters', [function(
 		var _postal;
 		var _string = string.split(',');
 			_string = _string[1].split(' ');
-			_string = _string[1] + _string[2];
+			_string = _string[3] + '/' + _string[1] + _string[2];
 
 		return _postal = _string.toLowerCase();
 
