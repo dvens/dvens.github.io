@@ -11,7 +11,7 @@ app.controller('detail-page', ['pageLoader', 'detail-service', 'ui-events', 'dis
 ) {
 
 	var _currentMovie;
-	var _nextMovie = 0;
+	window.nextMovie = window.nextMovie || 0;
 
 	var movieDetail = {};
 
@@ -68,15 +68,15 @@ app.controller('detail-page', ['pageLoader', 'detail-service', 'ui-events', 'dis
 
 		pageLoader.toggleLoader('hide');
 
-		uiEvents.swipe('left', function(){
+		uiEvents.swipe('right', function(){
 
-			if(_nextMovie <= 0) {
+			if(window.nextMovie <= 0) {
 				
 				window.location = '#/'
 
 			} else {
 
-				_nextMovie--
+				window.nextMovie--
 				_this.showNextMovie(data);
 
 			}
@@ -85,7 +85,7 @@ app.controller('detail-page', ['pageLoader', 'detail-service', 'ui-events', 'dis
 
 		uiEvents.swipe('left', function(){
 
-			_nextMovie++
+			window.nextMovie++
 			_this.showNextMovie(data);
 			
 		});
@@ -94,7 +94,7 @@ app.controller('detail-page', ['pageLoader', 'detail-service', 'ui-events', 'dis
 
 	movieDetail.showNextMovie = function(data) {
 
-		window.location = '#/movie/' + data[_nextMovie].id;
+		window.location = '#/movie/' + data[window.nextMovie].id;
 
 	}
 
