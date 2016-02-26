@@ -1,4 +1,4 @@
-app.service('house-service', ['pageLoader', 'api', function(
+app.service('dashboard-service', ['pageLoader', 'api', function(
 
 	pageLoader,
 	api,
@@ -8,9 +8,9 @@ app.service('house-service', ['pageLoader', 'api', function(
 ){
 
 	var _endPoint = '/koop/';
-	var houseService = {};
+	var dashboardService = {};
 
-	houseService.getHouse = function(id) {	
+	dashboardService.getHouse = function(id) {	
 
 		var url = _endPoint + id;
 		var prefix = '/detail/'
@@ -18,6 +18,6 @@ app.service('house-service', ['pageLoader', 'api', function(
 
 	}
 
-	return houseService;
+	return dashboardService;
 
 }]);

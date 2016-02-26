@@ -23,6 +23,7 @@ module.exports = function (gulp, $, config) {
             .pipe($.size({
                 title: config.css.destFile
             }))
+            .pipe($.cssbeautify())
             .pipe(gulp.dest(config.base + config.css.folder));
 
     });

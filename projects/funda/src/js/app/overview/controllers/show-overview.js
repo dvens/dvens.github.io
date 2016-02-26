@@ -11,6 +11,7 @@ app.controller('home', ['pageLoader', 'overview-service', 'gApi', 'filters' , fu
 ) {
 
 	var overview = {};
+	var $rootscope = this;
 
 	overview.init = function() {
 
@@ -29,7 +30,7 @@ app.controller('home', ['pageLoader', 'overview-service', 'gApi', 'filters' , fu
 				lat: position.coords.latitude,
 				lng: position.coords.longitude
 			};
-			
+
 			_this.getLocation(_position);
 
 		});
@@ -44,6 +45,7 @@ app.controller('home', ['pageLoader', 'overview-service', 'gApi', 'filters' , fu
 		gapi.getLocation(_query).then(function(response) {
 
 			var _response = JSON.parse(response);
+			
 			_this.loadData(_response.results[0]);	
 
 		});
@@ -54,39 +56,30 @@ app.controller('home', ['pageLoader', 'overview-service', 'gApi', 'filters' , fu
 
 		var _this = this;
 		var _postal = filters.getDutchPostal(res.formatted_address);
-		console.log(_postal);
+	
 		overviewService.getHouses('/' + _postal + '/+2km').then(function(response){
 
 			var _data = JSON.parse(response);
-			_this.loadTemplate(_data)
+			_this.loadPage(_data)
 
 		});
 
 	}
 
-	overview.loadTemplate = function(data) {
+	overview.loadPage = function(data) {
 
-		console.log(data);
+		var _ids = data.Objects.map(function(obj) {
 
-		var _this = this;
-		var data = {
-			title: 'Woningen op jouw locatie',
-			houses: data.Objects
-		};
-
-		pageLoader.loadTemplate($tools.$route.template, $tools.$route.templateId, data, function(){
-			
-			_this.initEvents();
+			return obj.Id;
 
 		});
+
+		var i = parseInt(Math.random()*(_ids.length-1));
+
+		$rootscope.data = _ids;
 		
-	}
-
-	overview.initEvents = function() {
-
-		var h1 = document.querySelector('h1');
-		console.log(h1);
-
+		window.location = '#/house/' + _ids[i];
+		
 	}
 
 	overview.init();

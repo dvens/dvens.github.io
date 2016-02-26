@@ -8,13 +8,11 @@
 
 html {
   background-color: $color-background;
-	overflow-y: scroll;
-  overflow-x: hidden;
 }
 
 html, body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
@@ -43,52 +41,10 @@ iframe {
     display: block;
 }
 
+img {
+  max-width: 100%;
+}
+
 body.loaded {
   opacity: 1;
 }
-
-.page__container {
-  max-width: 55em;
-  margin: 0 auto; 
-  padding: 2em; 
-}
-
-[peach-controller] {
-  opacity: 1;
-  visibility: visible;
-  transition: opacity .2s ease-in;
-}
-
-[peach-cloak] {
-  opacity: 0;
-  visibility: hidden;
-}
-
-[peach-view] {  
-  opacity: 1;
-  visibility: visible;
-
-  transform: translateY(0px);
-
-  transition: all .3s ease-in-out;
-
-  transition-delay: .2s;
-}
-
-  [peach-view].peach-transition {
-
-      transform: translateY(10px);
-
-      opacity: 0;
-      visibility: hidden;
-
-  }
-
-  [peach-view-holder] {
-    display: none;
-  }
-
-    body, body > header, main {
-      -webkit-backface-visibility: hidden;
-      transition: all 0.3s cubic-bezier(0.712, 0.0376, 0.392, 1);
-    }

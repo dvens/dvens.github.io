@@ -21,17 +21,15 @@ app.setAppConfig(function() {
 		home: {
 			title: 'Home',
 			url: '/',
-			template: 'home.html',
-			templateId: 'home',
 			controller: 'home'
 		},
 
 		detail: {
 			title: 'House Detail',
 			url: '/house/:id',
-			template: 'house-detail.html',
-			templateId: 'house-detail',
-			controller: 'house-detail'
+			template: 'dashboard.html',
+			templateId: 'dashboard',
+			controller: 'dashboard'
 		}
 
 	};

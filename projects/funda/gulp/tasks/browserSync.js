@@ -11,7 +11,7 @@ module.exports = function (gulp, $, config) {
             files: config.base + config.css.folder + '*.css', // This makes sure CSS changes are injected without reloading.
             notify: false,
             port: 8000,
-            tunnel: true,
+            // tunnel: true,
             server: {
                 baseDir: config.base,
                 middleware: [

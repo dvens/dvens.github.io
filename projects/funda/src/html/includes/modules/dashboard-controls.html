@@ -1,0 +1,123 @@
+<div class="dashboard__container">
+
+	<div class="dashboard__control--right">
+		<a class="dashboard__slide-button" href="#">
+			@@include('./src/assets/images/arrow.svg')
+		</a>
+	</div>
+
+	<div class="dashboard__control--left">
+		<a class="dashboard__slide-button--previous" href="#">
+			@@include('./src/assets/images/arrow.svg')
+		</a>
+	</div>
+
+	<nav role="navigation" class="dashboard__navigation" peach-controller="navigation">
+		
+		<ul>
+			<li>
+				<a class="navigation__button--favorite" href="#"></a>
+			</li>
+			<li>
+				<a class="navigation__button--images" href="#"></a>
+			</li>
+			<li>
+				<a class="navigation__button--info" href="#"></a>
+			</li>
+			<li>
+				<a class="navigation__button--list" href="#/favorites"></a>
+			</li>
+			<li>
+				<a class="navigation__button--fullscreen" href="#"></a>
+			</li>
+		</ul>
+
+	</nav>
+	
+	<section class="dashboard__house-content"></section>
+	
+	<section class="dashboard__photos"></section>
+
+</div>
+
+<template peach-template="house-content">
+	<div class="dashboard__wrapper">
+		
+		<a class="dashboard__close-btn" href="#"><i class="material-icons">close</i></a>
+		
+		<img src="{{house.HoofdFoto}}" alt="">
+		
+		<div class="house__intro">
+			
+			<div>
+				<h2>{{house.Adres}}</h2>
+				<p>{{house.Postcode}} {{house.Plaats}}</p>
+			</div>
+			
+			<div>
+				<p><strong>{{price}}</strong></p>
+			</div>
+
+		</div>
+
+		<span></span>
+
+		<div class="house__info">
+			
+			<h2>Kenmerken</h2>
+			<h3>Overdracht</h3>
+
+			<div> 
+				<p>Aangeboden sinds</p>
+				<p>{{house.AangebodenSindsTekst}}</p>	
+			</div>
+
+			<div> 
+				<p>Status</p>
+				<p>{{house.VerkoopStatus}}</p>	
+			</div>
+
+			<div> 
+				<p>Aanvaarding</p>
+				<p>{{house.Aanvaarding}}</p>	
+			</div>
+
+			<h3>Indeling</h3>
+			
+			<div> 
+				<p>Aantal woonlagen</p>
+				<p>{{house.AantalWoonlagen}}</p>	
+			</div>
+
+			<div> 
+				<p>Aantal kamers</p>
+				<p>{{house.AantalKamers}}</p>	
+			</div>
+
+			<div> 
+				<p>Aantal badkamers</p>
+				<p>{{house.AantalBadkamers}}</p>	
+			</div>
+
+		</div>
+
+		<a class="house__button" href="{{house.URL}}" target="_blank">Meer informatie op Funda</a>
+
+	</div>
+</template>
+
+<template peach-template="photo-overview">
+	
+	<a class="dashboard__close-btn" href="#"><i class="material-icons">close</i></a>
+
+	<div class="photo__container">
+
+		{% photos.forEach(function(src){ %}
+			
+			<img src="{{src}}" alt="">
+
+		{% }); %}
+
+	</div>
+
+</template>

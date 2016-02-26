@@ -7,13 +7,13 @@
     border-radius: 50%;
     cursor: wait;
     display: inline-block;
-    height: 60px;
-    width: 60px;
+    height: 3.75em;
+    width: 3.75em;
     z-index: 10;
     position: fixed;
 
-    left: calc(50% - 30px);
-    top: calc(50% - 30px);
+    left: calc(50% - 1.875em);
+    top: calc(50% - 1.875em);
 
     opacity: 0;
     transition: all .2s ease-out;
@@ -38,7 +38,7 @@
 .cursor-wait {
   cursor: wait;
   
-  main {
+  .page {
     transition: all 0.5s ease;
     opacity: 0;
     transform: scale(0.75, 0.75);

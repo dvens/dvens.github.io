@@ -20,8 +20,6 @@ app.run('init', function($config) {
 		app
 			.route({
 				url: $config.routing.home.url,
-				template: $config.routing.home.template,
-				templateId: $config.routing.home.templateId,
 				controller: $config.routing.home.controller
 			})
 

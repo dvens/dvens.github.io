@@ -1,0 +1,39 @@
+.page__container {
+  width: 100%;
+  margin: 0 auto; 
+}
+
+[peach-controller] {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity .2s ease-in;
+}
+
+[peach-cloak] {
+  opacity: 0;
+  visibility: hidden;
+}
+
+[peach-view] { 
+  height: 100%; 
+  opacity: 1;
+  visibility: visible;
+
+  transform: translateY(0px);
+
+  transition: all .3s ease-in-out;
+
+  transition-delay: .2s;
+}
+
+  [peach-view].peach-transition {
+
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+
+  }
+
+  [peach-view-holder] {
+    display: none;
+  }

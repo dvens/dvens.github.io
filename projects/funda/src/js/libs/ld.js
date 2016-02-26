@@ -36,8 +36,7 @@ Ld.prototype = {
     },
 
     hasClass: function(el){
-        this.element.classList.contains(el);
-        return this;
+        return this.element.classList.contains(el);
     },
 
     toggleClass: function(el){
@@ -85,8 +84,7 @@ Ld.prototype = {
     }, 
 
     attr: function(el){
-        this.element.getAttribute(el);
-        return this;
+        return this.element.getAttribute(el);
     }, 
 
     setAttribute: function(el, data){

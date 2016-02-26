@@ -1,9 +1,9 @@
 @@include('./src/html/includes/_base/head.html')
-@@include('./src/html/includes/_base/header.html')
 
 <div class="loader"></div>
 
-<main role="main">	
+<main role="main" class="dashboard">	
+	@@include('./src/html/includes/modules/dashboard-controls.html')
 	<div class="page" peach-view></div>
 	<div peach-view-holder></div>
 </main>

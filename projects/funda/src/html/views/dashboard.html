@@ -1,0 +1,27 @@
+<template peach-template="dashboard">
+	
+	<section class="page__container">
+		
+		<div class="dashboard__content">
+			
+			@@include('./src/assets/images/pointer.svg')
+			
+			<h2>{{house.Adres}}</h2>
+
+			<p>{{house.Postcode}} {{house.Plaats}}</p>
+			<p>&euro;{{price}}</p>
+			<p>{{house.WoonOppervlakte}} m<sub>2</sub> <span class="dot"></span>{{house.AantalKamers}} kamers</p>
+
+		</div>
+		
+		<div class="dashboard__overlay"></div>	
+
+		<video class="dashboard__video" autoplay muted loop poster="{{house.Video.ImageUrl}}">
+			<source src="{{house.Video.Videos[0].Url}}" type="video/mp4">
+		</video>
+		
+		<div class="dashboard__poster" style=" background-image: url({{house.Video.ImageUrl}})"></div>
+
+	</section>
+
+</template>

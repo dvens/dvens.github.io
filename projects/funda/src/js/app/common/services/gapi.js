@@ -12,9 +12,8 @@ app.service('gApi', ['api', function(
 	gApi.getLongLang = function(callback) {
 
 		if(navigator.geolocation) {
-
-			var _location = navigator.geolocation.getCurrentPosition(callback);
 			
+			var _location = navigator.geolocation.getCurrentPosition(callback);
 
 		} else {
 
