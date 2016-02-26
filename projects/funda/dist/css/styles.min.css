@@ -577,6 +577,7 @@ footer svg {
 }
 
 [class*=" navigation__button"],[class^=navigation__button] {
+    cursor: pointer;
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
@@ -610,6 +611,10 @@ footer svg {
 
 [class*=" navigation__button"][class*="--favorite"]:before,[class^=navigation__button][class*="--favorite"]:before {
     background-image: url(../images/heart.svg)
+}
+
+[class*=" navigation__button"][class*="--favorite"]:hover:before,[class^=navigation__button][class*="--favorite"]:hover:before {
+    background-image: url(../images/heart-full.svg)
 }
 
 [class*=" navigation__button"][class*="--images"]:before,[class^=navigation__button][class*="--images"]:before {

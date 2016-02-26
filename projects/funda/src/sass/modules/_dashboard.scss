@@ -145,6 +145,7 @@
 
 	[class^="navigation__button"],
 	[class*=" navigation__button"] {
+		cursor: pointer;
 		background-color: $color-white;
 		border-radius: 50%;
 		display: inline-block;
@@ -174,6 +175,10 @@
 
 			&:before {
 				background-image: url('../images/heart.svg');
+			}
+
+			&:hover:before {
+				background-image: url('../images/heart-full.svg');	
 			}
 		}
 
